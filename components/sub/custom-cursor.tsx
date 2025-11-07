@@ -45,8 +45,8 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div id="cursor-inner" className="cursor-inner fixed" />
-      <div id="cursor-outer" className="cursor-outer fixed" />
+      <div id="cursor-inner" className="hidden md:block cursor-inner fixed" />
+      <div id="cursor-outer" className="hidden md:block cursor-outer fixed" />
     </>
   );
 }
