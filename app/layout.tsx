@@ -7,7 +7,7 @@ import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
-
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import CustomCursor from "@/components/sub/custom-cursor";
 import AOSInit from "@/components/sub/aos-init";
@@ -35,7 +35,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
         {children}
         <Footer />
         <CustomCursor />
+        <Analytics/>
       </body>
     </html>
   );
 }
+
