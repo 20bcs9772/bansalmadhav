@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Hero from './components/Hero';
 import AboutNew from './components/AboutNew';
-import Experience from './components/Experience';
+import ExperienceNew from './components/ExperienceNew';
 import SkillsNew from './components/SkillsNew';
 import PersonalProjects from './components/PersonalProjects';
-import ProfessionalProjects from './components/ProfessionalProjects';
+import ProfessionalProjectsCarousel from './components/ProfessionalProjectsCarousel';
 import ContactNew from './components/ContactNew';
 import ScrollToTop from './components/ScrollToTop';
 import CursorEffect from './components/CursorEffect';
@@ -16,10 +16,10 @@ function App() {
       <CursorEffect />
       <Hero />
       <AboutNew />
-      <Experience />
+      <ExperienceNew />
       <SkillsNew />
       <PersonalProjects />
-      <ProfessionalProjects />
+      <ProfessionalProjectsCarousel />
       <ContactNew />
       <ScrollToTop />
       
