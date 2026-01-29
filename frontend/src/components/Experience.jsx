@@ -95,10 +95,18 @@ const Experience = () => {
                     style={{ transformStyle: 'preserve-3d' }}
                   >
                     <div className="flex items-start gap-3 mb-4">
-                      <Building2 className={`w-6 h-6 text-${exp.color}-400 mt-1`} />
+                      <Building2 className={`w-6 h-6 mt-1 ${
+                        exp.color === 'purple' ? 'text-purple-400' : 
+                        exp.color === 'blue' ? 'text-blue-400' : 
+                        'text-green-400'
+                      }`} />
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                        <p className={`text-${exp.color}-400 font-semibold mb-2`}>{exp.position}</p>
+                        <p className={`font-semibold mb-2 ${
+                          exp.color === 'purple' ? 'text-purple-400' : 
+                          exp.color === 'blue' ? 'text-blue-400' : 
+                          'text-green-400'
+                        }`}>{exp.position}</p>
                         <div className="flex items-center gap-2 text-gray-400 text-sm">
                           <Calendar className="w-4 h-4" />
                           <span>{exp.period}</span>
@@ -108,7 +116,11 @@ const Experience = () => {
                     <ul className="space-y-2">
                       {exp.description.map((item, i) => (
                         <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                          <span className={`text-${exp.color}-400 mt-1`}>•</span>
+                          <span className={`mt-1 ${
+                            exp.color === 'purple' ? 'text-purple-400' : 
+                            exp.color === 'blue' ? 'text-blue-400' : 
+                            'text-green-400'
+                          }`}>•</span>
                           <span>{item}</span>
                         </li>
                       ))}
