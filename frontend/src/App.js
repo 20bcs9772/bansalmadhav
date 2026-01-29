@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Hero from './components/Hero';
-import About from './components/About';
+import AboutNew from './components/AboutNew';
 import Experience from './components/Experience';
 import SkillsNew from './components/SkillsNew';
 import PersonalProjects from './components/PersonalProjects';
 import ProfessionalProjects from './components/ProfessionalProjects';
-import Contact from './components/Contact';
+import ContactNew from './components/ContactNew';
 import ScrollToTop from './components/ScrollToTop';
 import CursorEffect from './components/CursorEffect';
 
@@ -15,12 +15,12 @@ function App() {
     <div className="App bg-[#0a0a0a] text-white">
       <CursorEffect />
       <Hero />
-      <About />
+      <AboutNew />
       <Experience />
       <SkillsNew />
       <PersonalProjects />
       <ProfessionalProjects />
-      <Contact />
+      <ContactNew />
       <ScrollToTop />
       
       {/* Footer */}
