@@ -3,8 +3,9 @@ import './App.css';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
+import SkillsNew from './components/SkillsNew';
+import PersonalProjects from './components/PersonalProjects';
+import ProfessionalProjects from './components/ProfessionalProjects';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import CursorEffect from './components/CursorEffect';
@@ -16,8 +17,9 @@ function App() {
       <Hero />
       <About />
       <Experience />
-      <Skills />
-      <Projects />
+      <SkillsNew />
+      <PersonalProjects />
+      <ProfessionalProjects />
       <Contact />
       <ScrollToTop />
       
