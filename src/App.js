@@ -15,7 +15,7 @@ function App() {
     <div className="App bg-[#0a0a0a] text-white">
       <CursorEffect />
       <Hero />
-      <AboutNew />
+      {/* <AboutNew /> */}
       <ExperienceNew />
       <SkillsNew />
       <PersonalProjects />
