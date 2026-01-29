@@ -20,20 +20,7 @@ function App() {
       <SkillsNew />
       <PersonalProjects />
       <ProfessionalProjectsCarousel />
-      <ContactNew />
-      <ScrollToTop />
-      
-      {/* Footer */}
-      <footer className="bg-[#0a0a0a] border-t border-gray-800 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 Madhav Bansal. Built with React, Framer Motion & Tailwind CSS
-          </p>
-          <p className="text-gray-500 text-xs mt-2">
-            Designed with passion & precision
-          </p>
-        </div>
-      </footer>
+      <ContactNew />      
     </div>
   );
 }

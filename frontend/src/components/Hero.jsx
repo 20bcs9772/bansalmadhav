@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
-import { ParticleBackground } from './ParticleBackground';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { ParticleBackground } from "./ParticleBackground";
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 const Hero = () => {
-  const [text, setText] = useState('');
-  const fullText = "Full-Stack Engineer";
-  
+  const [text, setText] = useState("");
+  const fullText = "Full-Stack Developer";
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -21,13 +22,37 @@ const Hero = () => {
   }, []);
 
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const links = [
+    {
+      title: "Mail",
+      icon: (
+        <Mail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "mailto:bansalmadhav787@gmail.com",
+    },
+    {
+      title: "Github",
+      icon: (
+        <Github className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://github.com/20bcs9772",
+    },
+    {
+      title: "Linkedin",
+      icon: (
+        <Linkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/madhav-bansal-b81349200/",
+    },
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
       <ParticleBackground />
-      
+
       <div className="container mx-auto px-6 z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +70,7 @@ const Hero = () => {
               Madhav Bansal
             </span>
           </motion.h1>
-          
+
           <motion.div
             className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-8 h-16 flex items-center justify-center"
             initial={{ opacity: 0 }}
@@ -55,19 +80,23 @@ const Hero = () => {
             <span className="text-white">{text}</span>
             <span className="animate-pulse text-green-400 ml-1">|</span>
           </motion.div>
-          
+
           <motion.p
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Building production-grade web & mobile apps with 2+ years of experience.
-            Specializing in React, React Native, Node.js, and AWS.
+            Building production-grade web & mobile apps with 2+ years of
+            experience. Specializing in React, React Native, Node.js, and AWS.
           </motion.p>
-          
+
+          <motion.div className="hidden md:flex gap-6 justify-center mb-16">
+            <FloatingDock items={links} />
+          </motion.div>
+
           <motion.div
-            className="flex gap-6 justify-center mb-16"
+            className="flex gap-6 justify-center mb-16 md:hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
@@ -81,7 +110,7 @@ const Hero = () => {
               <Github className="w-6 h-6 text-gray-400 group-hover:text-purple-400 transition-colors" />
             </a>
             <a
-              href="https://linkedin.com/in/madhav-bansal"
+              href="https://www.linkedin.com/in/madhav-bansal-b81349200/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative p-4 bg-gray-900/50 rounded-full border border-blue-500/30 hover:border-blue-400 transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:scale-110"
@@ -97,7 +126,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      
+
       <motion.button
         onClick={scrollToAbout}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
