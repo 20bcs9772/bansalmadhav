@@ -1,59 +1,78 @@
-import React, { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Mail, Linkedin, Github, ExternalLink, Send, MapPin, Calendar, MessageSquare } from 'lucide-react';
+import React, { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  Mail,
+  Linkedin,
+  Github,
+  ExternalLink,
+  Send,
+  MapPin,
+  Calendar,
+  MessageSquare,
+} from "lucide-react";
 
 const ContactNew = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const contacts = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'bansalmadhav787@gmail.com',
-      link: 'mailto:bansalmadhav787@gmail.com',
-      color: 'from-green-500 to-emerald-600',
-      description: 'Best way to reach me'
+      label: "Email",
+      value: "bansalmadhav787@gmail.com",
+      link: "mailto:bansalmadhav787@gmail.com",
+      color: "from-green-500 to-emerald-600",
+      description: "Best way to reach me",
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      value: 'madhav-bansal',
-      link: 'https://linkedin.com/in/madhav-bansal',
-      color: 'from-blue-500 to-blue-600',
-      description: 'Let\'s connect professionally'
+      label: "LinkedIn",
+      value: "madhav-bansal",
+      link: "https://linkedin.com/in/madhav-bansal",
+      color: "from-blue-500 to-blue-600",
+      description: "Let's connect professionally",
     },
     {
       icon: Github,
-      label: 'GitHub',
-      value: '20bcs9772',
-      link: 'https://github.com/20bcs9772',
-      color: 'from-purple-500 to-purple-600',
-      description: 'Check out my code'
+      label: "GitHub",
+      value: "20bcs9772",
+      link: "https://github.com/20bcs9772",
+      color: "from-purple-500 to-purple-600",
+      description: "Check out my code",
     },
     {
       icon: ExternalLink,
-      label: 'Portfolio',
-      value: 'bansalmadhav.vercel.app',
-      link: 'https://bansalmadhav.vercel.app',
-      color: 'from-pink-500 to-rose-600',
-      description: 'View my work'
-    }
+      label: "Portfolio",
+      value: "bansalmadhav.vercel.app",
+      link: "https://bansalmadhav.vercel.app",
+      color: "from-pink-500 to-rose-600",
+      description: "View my work",
+    },
   ];
 
   const availability = [
-    { icon: MapPin, text: 'Based in India', color: 'text-green-400' },
-    { icon: Calendar, text: 'Available for work', color: 'text-blue-400' },
-    { icon: MessageSquare, text: 'Response within 24h', color: 'text-purple-400' }
+    { icon: MapPin, text: "Based in India", color: "text-green-400" },
+    { icon: Calendar, text: "Available for work", color: "text-blue-400" },
+    {
+      icon: MessageSquare,
+      text: "Response within 24h",
+      color: "text-purple-400",
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-[#0f0f0f] relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 bg-[#0f0f0f] relative overflow-hidden"
+    >
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
@@ -70,7 +89,8 @@ const ContactNew = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
-            Got a project in mind? Let's discuss how I can help bring your ideas to life.
+            Got a project in mind? Let's discuss how I can help bring your ideas
+            to life.
           </p>
         </motion.div>
 
@@ -84,15 +104,16 @@ const ContactNew = () => {
           >
             <div className="bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-green-500/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-500/30 hover:border-purple-500/50 transition-all group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-500/5 via-transparent to-green-500/5 group-hover:scale-110 transition-transform duration-700" />
-              
+
               <div className="relative z-10 text-center">
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Ready to Start a Project?
                 </h3>
                 <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                  I'm currently available for freelance work and full-time opportunities.
+                  I'm currently available for freelance work and full-time
+                  opportunities.
                 </p>
-                
+
                 {/* Availability badges */}
                 <div className="flex flex-wrap justify-center gap-4 mb-8">
                   {availability.map((item, index) => {
@@ -106,7 +127,9 @@ const ContactNew = () => {
                         className="flex items-center gap-2 px-4 py-2 bg-black/40 rounded-full border border-white/10"
                       >
                         <Icon className={`w-4 h-4 ${item.color}`} />
-                        <span className="text-sm text-gray-300">{item.text}</span>
+                        <span className="text-sm text-gray-300">
+                          {item.text}
+                        </span>
                       </motion.div>
                     );
                   })}
@@ -147,11 +170,15 @@ const ContactNew = () => {
                   className={`block group bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-transparent transition-all relative overflow-hidden`}
                 >
                   {/* Gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${contact.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${contact.color} opacity-0 group-hover:opacity-10 transition-opacity`}
+                  />
+
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${contact.color} group-hover:scale-110 transition-transform`}>
+                      <div
+                        className={`p-3 rounded-xl bg-gradient-to-br ${contact.color} group-hover:scale-110 transition-transform`}
+                      >
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <motion.div
@@ -161,10 +188,16 @@ const ContactNew = () => {
                         <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" />
                       </motion.div>
                     </div>
-                    
-                    <h3 className="text-white font-bold text-lg mb-1">{contact.label}</h3>
-                    <p className="text-gray-400 text-sm mb-2">{contact.description}</p>
-                    <p className="text-gray-300 font-medium text-sm break-all">{contact.value}</p>
+
+                    <h3 className="text-white font-bold text-lg mb-1">
+                      {contact.label}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-2">
+                      {contact.description}
+                    </p>
+                    <p className="text-gray-300 font-medium text-sm break-all">
+                      {contact.value}
+                    </p>
                   </div>
                 </motion.a>
               );

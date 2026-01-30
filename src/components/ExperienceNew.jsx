@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "Feb 2025 – Present",
     content: (
-      <div className="bg-gray-900/60 backdrop-blur-md rounded-2xl p-6 border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.15)]">
+      <div className="backdrop-blur-md rounded-2xl px-6">
         <div className="flex items-start gap-4 mb-4">
           <div>
             <h3 className="text-2xl font-bold text-white">
@@ -41,7 +41,7 @@ const experiences = [
   {
     title: "Jul 2023 – Feb 2025",
     content: (
-      <div className="bg-gray-900/60 backdrop-blur-md rounded-2xl p-6 border border-blue-500/30 shadow-[0_0_40px_rgba(59,130,246,0.15)]">
+      <div className="backdrop-blur-md rounded-2xl px-6">
         <div className="flex items-start gap-4 mb-4">
           <div>
             <h3 className="text-2xl font-bold text-white">Cybernext</h3>
@@ -74,7 +74,7 @@ const experiences = [
   {
     title: "Jun 2022 – Jul 2022",
     content: (
-      <div className="bg-gray-900/60 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 shadow-[0_0_40px_rgba(34,197,94,0.15)]">
+      <div className="backdrop-blur-md rounded-2xl px-6">
         <div className="flex items-start gap-4 mb-4">
           <div>
             <h3 className="text-2xl font-bold text-white">Complykart</h3>
