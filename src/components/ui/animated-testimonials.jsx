@@ -122,18 +122,18 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
           </motion.div>
 
           {/* Controls */}
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-12 md:pt-8">
             <button
               onClick={handlePrev}
-              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-900/50 border border-purple-500 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
             >
-              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <IconArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12 text-blue-300" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-900/50 border border-purple-500 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
             >
-              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <IconArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12 text-blue-300" />
             </button>
           </div>
         </div>

@@ -20,7 +20,7 @@ export const LinkPreview = ({
   height = 125,
   quality = 50,
   layout = "fixed",
-  isStatic = false,
+  isStatic = true,
   imageSrc = "",
 }) => {
   let src;
@@ -31,10 +31,13 @@ export const LinkPreview = ({
       meta: false,
       embed: "screenshot.url",
       colorScheme: "dark",
-      "viewport.isMobile": true,
+      "viewport.isMobile": false,
+      "viewport.isLandscape": true,
       "viewport.deviceScaleFactor": 1,
-      "viewport.width": width * 3,
-      "viewport.height": height * 3,
+      timeout: "10s",
+      video: true
+      // "viewport.width": width * 3,
+      // "viewport.height": height * 3,
     });
     src = `https://api.microlink.io/?${params}`;
   } else {

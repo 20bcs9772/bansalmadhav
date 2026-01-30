@@ -7,29 +7,33 @@ export default function ProfessionalProjectsCarousel() {
   const projects = [
     {
       name: (
-        <LinkPreview url="https://oceaniekstream.com">
+        <LinkPreview
+          url="https://oceaniekstream.com"
+          imageSrc="/projects/3.png"
+        >
           <span className="inline-flex items-center gap-2">
-            E-commerce Platform
-            <ExternalLink className="w-5 h-5" />
+            OTT Platform | Oceaniek Stream
           </span>
         </LinkPreview>
       ),
-      designation: "Personal Project · Production",
-      src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200",
+      designation: "Full Stack Development",
+      src: "/projects/3.png",
       quote: (
         <div className="space-y-6">
           <p className="text-neutral-200 text-sm md:text-base leading-relaxed">
-            Full-stack multi-agent AI support system with intelligent routing
-            and real-time streaming responses.
+            Built a full-scale OTT streaming platform supporting movies, series,
+            and exclusive content across mobile and TV devices. Developed the
+            frontend using React and the backend with Node.js, Express, and
+            MongoDB. Implemented user authentication, content management, and
+            smooth video playback optimized for performance and scalability.
           </p>
-
           <TechStack
             tech={[
-              "Hono",
-              "Vercel AI SDK",
-              "PostgreSQL",
-              "Prisma",
-              "TypeScript",
+              "Next.js",
+              "Payment Gateway Integration",
+              "Responsive Design",
+              "AWS",
+              "Video Stream",
             ]}
           />
         </div>
@@ -37,28 +41,30 @@ export default function ProfessionalProjectsCarousel() {
     },
     {
       name: (
-        <LinkPreview url="https://oceaniekstream.com">
+        <LinkPreview url="https://punjabports.com/" imageSrc="/projects/1.png">
           <span className="inline-flex items-center gap-2">
-            E-commerce Platform
-            <ExternalLink className="w-5 h-5" />
+            Restaurant Website | Punjab Ports
           </span>
         </LinkPreview>
       ),
-      designation: "Personal Project · Production",
-      src: "https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1200",
+      designation: "Full Stack Development",
+      src: "/projects/1.png",
       quote: (
         <div className="space-y-6">
           <p className="text-neutral-200 text-sm md:text-base leading-relaxed">
-            Comprehensive real-time event management platform with a React
-            Native app and Node.js backend.
+            Developed a restaurant e-commerce platform allowing users to browse
+            menus, create accounts, and place online orders with COD and
+            Razorpay payments. Built the frontend using React, Tailwind, and
+            ShadCN, with a backend powered by Payload CMS and MongoDB, including
+            an admin panel for managing products and orders.
           </p>
           <TechStack
             tech={[
-              "React Native",
+              "React",
+              "Payment Gateway Integration",
               "Node.js",
-              "Firebase",
-              "Google Maps API",
-              "FCM",
+              "MongoDB",
+              "ExpressJS",
             ]}
           />
         </div>
@@ -66,23 +72,66 @@ export default function ProfessionalProjectsCarousel() {
     },
     {
       name: (
-        <LinkPreview url="https://oceaniekstream.com">
+        <LinkPreview
+          url="https://thehealinggroove.com/"
+          imageSrc="/projects/4.png"
+        >
           <span className="inline-flex items-center gap-2">
-            E-commerce Platform
-            <ExternalLink className="w-5 h-5" />
+            Medical Tourism Facilitator | The Healing Groove
           </span>
         </LinkPreview>
       ),
-      designation: "Oceaniek Technologies",
-      src: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1200",
+      designation: "Full Stack Development",
+      src: "/projects/4.png",
       quote: (
         <div className="space-y-6">
           <p className="text-neutral-200 text-sm md:text-base leading-relaxed">
-            Production-ready e-commerce platform with payment integration and
-            AWS deployment.
+            Built a medical tourism platform connecting patients with hospitals
+            and healthcare providers worldwide. Developed using Next.js, the
+            platform allows users to explore treatments, compare destinations,
+            and request medical assistance.
           </p>
           <TechStack
-            tech={["React.js", "Node.js", "MongoDB", "AWS", "Stripe"]}
+            tech={[
+              "Next.js",
+              "Responsive Design",
+              "User Experience",
+              "Map Integration",
+              "SEO",
+            ]}
+          />
+        </div>
+      ),
+    },
+    {
+      name: (
+        <LinkPreview
+          url="https://nautilustimes.com/"
+          imageSrc="/projects/2.png"
+        >
+          <span className="inline-flex items-center gap-2">
+            Maritime Training Website | Nautilus Times
+          </span>
+        </LinkPreview>
+      ),
+      designation: "Full Stack Development",
+      src: "/projects/2.png",
+      quote: (
+        <div className="space-y-6">
+          <p className="text-neutral-200 text-sm md:text-base leading-relaxed">
+            Developed a modern maritime training platform using React, Node.js,
+            Express, and MongoDB. The website supports course listings, secure
+            payment gateway integration, and email notifications. Emphasis was
+            placed on responsive design and delivering a smooth experience.
+          </p>
+          <TechStack
+            tech={[
+              "React.js",
+              "Node.js",
+              "ExpressJS",
+              "MongoDB",
+              "Payment Gateway Integration",
+            ]}
           />
         </div>
       ),
