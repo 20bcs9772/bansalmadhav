@@ -1,6 +1,5 @@
 "use client";
 
-import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -62,12 +61,16 @@ export const HeroContent = () => {
           Software development. Check out my projects and skills.
         </motion.p>
 
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn more
-        </motion.a>
+        <motion.div variants={slideInFromLeft(1)}>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] w-full"
+          >
+            Resume
+          </a>
+        </motion.div>
       </div>
 
       <motion.div

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
 import { CardStreamController } from "../classes/card-stream-controller";
 import { ParticleSystem } from "../classes/particle-system";
 import { ParticleScanner } from "../classes/particle-scanner";
@@ -25,7 +24,7 @@ const Projects = () => {
         containerRef.current,
         cardLineRef.current,
         setSpeed,
-        particleScannerRef
+        particleScannerRef,
       );
     }
 
@@ -35,7 +34,7 @@ const Projects = () => {
 
     if (scannerCanvasRef.current) {
       particleScannerRef.current = new ParticleScanner(
-        scannerCanvasRef.current
+        scannerCanvasRef.current,
       );
     }
 
@@ -74,7 +73,7 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className="relative w-full overflow-hidden">
+    <div id="projects" className="pt-16 relative w-full overflow-hidden">
       <style jsx>{`
         @keyframes glitch {
           0% {
@@ -115,12 +114,18 @@ const Projects = () => {
         }
       `}</style>
 
-      {/* Controls */}
-      <motion.div className="text-[50px] mt-10 font-medium text-center text-gray-200">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-          Projects
-        </span>
-      </motion.div>
+      {/* Section header — matches Technical Arsenal styling */}
+      <div className="text-center mb-12 sm:mb-16 mt-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Projects
+          </span>
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 mx-auto rounded-full" />
+        <p className="text-gray-400 mt-4 text-base sm:text-lg px-2">
+          What I&apos;ve built and shipped
+        </p>
+      </div>
       {/* <div className="absolute top-5 left-5 flex gap-2.5 z-[100]">
         <button
           onClick={toggleAnimation}

@@ -1,5 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 export const SKILL_DATA = [
   {
@@ -92,6 +93,11 @@ export const SOCIALS = [
     name: "LinkedIn",
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/madhav-bansal-b81349200/",
+  },
+  {
+    name: "Gmail",
+    icon: SiGmail,
+    link: "mailto:madhavbansal.example@gmail.com",
   },
 ] as const;
 

@@ -1,6 +1,6 @@
 import { Hero } from "@/components/main/hero";
 import Projects from "@/components/main/projects";
-import { Skills } from "@/components/main/skills";
+import Skills from "../components/main/technicalArsenal";
 
 export default function Home() {
   return (
