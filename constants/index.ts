@@ -277,6 +277,7 @@ export const cardImages = [
   "projects/3.png",
   "projects/4.png",
   "projects/5.png",
+  "projects/6.png",
 ];
 
 export const projectData = [
@@ -319,5 +320,18 @@ export const projectData = [
     skills: ["Full Stack", "Responsive", "User Interface"],
     tech: ["Next.js", "Payload CMS", "VPS Hosting"],
     link: "https://thehealinggroove.com",
+  },
+  {
+    name: "Johnny's Dirty Soda & Exotic Snacks",
+    description:
+      "A bold, brutalist-style interactive platform featuring a virtual vending machine and a 3D global snack explorer.",
+    skills: [
+      "Frontend Development",
+      "Interactive UI",
+      "3D Integration",
+      "Responsive Design",
+    ],
+    tech: ["React", "Vite", "Tailwind CSS", "Three.js", "GSAP"],
+    link: "https://soda-pop-delta.vercel.app/",
   },
 ];
